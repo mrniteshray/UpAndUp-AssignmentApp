@@ -111,7 +111,7 @@ enum class PerformanceTab {
 @Composable
 fun PerformanceGridUI() {
     val tabs = listOf("LATE", "UNIFORM", "GEORFENCE", "ALUMNUS", "FIELD TASKS")
-    var selectedTab by remember { mutableStateOf(PerformanceTab.GEOFENCE) }
+    var selectedTab by remember { mutableStateOf(PerformanceTab.LATE) }
 
     val performanceTabIndexMap = mapOf(
         PerformanceTab.LATE to 0,
@@ -127,6 +127,7 @@ fun PerformanceGridUI() {
     val dummyData = mapOf(
         Pair(0, 0) to true,
         Pair(1, 0) to true,
+        Pair(1,2) to true,
         Pair(2, 1) to true,
         Pair(3, 2) to true,
         Pair(4, 3) to true,

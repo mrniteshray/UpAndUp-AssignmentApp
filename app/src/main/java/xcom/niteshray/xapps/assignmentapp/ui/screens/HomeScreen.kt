@@ -1,5 +1,6 @@
 package xcom.niteshray.xapps.assignmentapp.ui.screens
 
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -13,6 +14,7 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -26,6 +28,7 @@ import xcom.niteshray.xapps.assignmentapp.ui.theme.PrimaryColor
 fun HomeScreen(
     navController: NavController,
 ) {
+    val context = LocalContext.current
     Box(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -83,7 +86,7 @@ fun HomeScreen(
             })
             Spacer(modifier = Modifier.height(16.dp))
             CalendarOptionButton(painterResource(R.drawable.calendar_view_month),text = "MONTH", onClick = {
-                navController.navigate(Screen.Month.route)
+                Toast.makeText(context, "null", Toast.LENGTH_SHORT).show()
             })
         }
     }

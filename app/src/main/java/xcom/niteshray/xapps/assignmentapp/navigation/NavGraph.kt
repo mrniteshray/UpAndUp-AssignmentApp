@@ -9,6 +9,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import xcom.niteshray.xapps.assignmentapp.ui.screens.DayScreen.DayScreen
 import xcom.niteshray.xapps.assignmentapp.ui.screens.HomeScreen
+import xcom.niteshray.xapps.assignmentapp.ui.screens.MonthScreen.MonthScreen
 import xcom.niteshray.xapps.assignmentapp.ui.screens.WeekScreen.WeekScreen
 
 sealed class Screen(val route: String) {
@@ -27,6 +28,6 @@ fun App(navController: NavHostController) {
         }
         composable(Screen.Day.route) { DayScreen(navController) }
         composable(Screen.Week.route) { WeekScreen(navController) }
-//        composable(Screen.Month.route) { MonthScreen(navController) }
+        composable(Screen.Month.route) { MonthScreen(navController) }
     }
 }

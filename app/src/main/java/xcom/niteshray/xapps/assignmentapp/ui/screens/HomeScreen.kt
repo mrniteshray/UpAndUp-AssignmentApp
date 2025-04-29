@@ -86,7 +86,7 @@ fun HomeScreen(
             })
             Spacer(modifier = Modifier.height(16.dp))
             CalendarOptionButton(painterResource(R.drawable.calendar_view_month),text = "MONTH", onClick = {
-                Toast.makeText(context, "null", Toast.LENGTH_SHORT).show()
+                navController.navigate(Screen.Month.route)
             })
         }
     }
